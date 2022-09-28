@@ -38,16 +38,21 @@
                 <input type="submit" class="submit" name="submit" id="submit" value="Enviar">
             </div>
         </form>
+        <input type="button" onclick="teste()">
+        <label id="teste" for="">a</label>
     </main>
     <script lang="javascript">
         function validacao() {
             let re = "([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})";
             let cpf = document.getElementById('cpf').value;
             let nome = document.getElementById('name').value;
+
+            var hoje = new Date();
+            var dd = String(hoje.getDate()).padStart(2, '0');
+            var mm = String(hoje.getMonth() + 1).padStart(2, '0');
+            var yyyy = hoje.getFullYear();
             let aniversario = document.getElementById('DataNascimento').value;
-            const date = new Date();
-            const month = date.getMonth + 1
-            const day = date.getDay          
+
 
             if (!cpf.match(re)) {
                 alert('CPF Invalido!');
@@ -60,17 +65,26 @@
             }
             
             if (aniversario.length != 0) {
-                const ano = aniversario.split("-")
+                const ano = aniversario.split("-");
                 if (ano[0] >= 2005){
-                    alert('Você precisa ser maior de idade para se cadastrar')
-                    return false;
-                }
+                    console.log("tem 18 não irmão 1");
+                } else if (ano[0] == 2004){
+                    if (ano[1] == mm) {
+                        if (ano[2] > dd){
+                            console.log("tem 18 não irmão 2");
+                        } else {
+                            console.log("tem 18 irmão"); 
+                        }
+                    } else if (ano[1] > mm){
+                        console.log("tem 18 não irmão 3");
+                    }
+                } else {
+                    console.log("tem 18 irmão"); 
+                }  
             } else {
-                alert('Digite o seu aniversario!');
-                return false;
-            }
-            return true;
-        }    
+                    alert('Digite o seu aniversario!');
+                }
+        }
     </script>
 </body>
 </html>
