@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#corpo{
+    background-image: linear-gradient(to left, rgba(184, 219, 217, 0.7), rgba(184,219,217, 0.4));
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #78e0dcff;
+    height: 5vh;
+}
+
+#navlist{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+}
+
+p {
+    font-size: 16px;
+}  

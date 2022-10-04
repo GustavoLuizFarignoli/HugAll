@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/cadastro.css">
     <title>Login no HugAll</title>
 </head>
-<body>
+<body id="corpo">
     <head>
         <nav id="nav">
             <div>
@@ -21,7 +21,7 @@
         </nav>
     </head>
     <main id="content">
-        <form id="form" onsubmit="return validacao()">
+        <form id="form" action="./cadastro.php" method="POST" onsubmit="return validacao()">
             <div class="input">
                 <label for="">CPF</label>
                 <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
@@ -35,7 +35,7 @@
                 <input type="date" class="box-input" name="DataNascimento" id="DataNascimento" placeholder="dd/MM/AAAA">
             </div>
             <div>
-                <input type="submit" class="submit" name="submit" id="submit" value="Enviar">
+                <button type="submit" class="button" id="button-send">Enviar</button>
             </div>
         </form>
     </main>
