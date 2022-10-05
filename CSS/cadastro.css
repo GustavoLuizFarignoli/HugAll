@@ -48,6 +48,7 @@
 .input{
     display: flex;
     flex-direction: column;
+    color:#231f20;
     width: 100%;
     padding-bottom: 10px;
 }

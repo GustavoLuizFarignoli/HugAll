@@ -7,12 +7,14 @@
 
 #corpo{
     background-image: linear-gradient(to left, rgba(184, 219, 217, 0.7), rgba(184,219,217, 0.4));
+    color: #231f20;
 }
 
 #nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #231f20;
     background-color: #78e0dcff;
     height: 5vh;
 }
@@ -20,10 +22,12 @@
 #navlist{
     display: flex;
     justify-content: space-around;
+    color: #231f20;
     width: 100%;
     list-style: none;
 }
 
 p {
     font-size: 16px;
+    color: #231f20;
 }  
