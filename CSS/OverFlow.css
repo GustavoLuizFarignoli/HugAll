@@ -10,11 +10,12 @@
     height: 100vh;
     display: flex;
     text-align: center;
+    background-image: linear-gradient(to right, rgb(35, 31, 32, 0.9), rgba(35, 31, 32, 0.7));
 }
 
 .menu{
     width: 20%;
-    background-color: #121227;
+    background-color: rgb(36, 110, 185, 0.6);
 }
 
 .menu a{
@@ -24,12 +25,12 @@
     letter-spacing: 2px;
     display: list-item;
     padding: 20px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #231f20;
+    border-bottom: 1px solid #231f20;
 }
 
 .menu a:hover{
-    background-color: red;
+    background-color: rgb(232, 174, 183, 0.8);
     transition: 0.5s;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -46,7 +47,7 @@
     color: #fff;
     letter-spacing: 4px;
     padding: 20px;
-    background-color: #000;
+    background-color: rgb(36, 110, 185);
 }
 
 #Logo {
@@ -54,6 +55,6 @@
     font-size: 30px;
     letter-spacing: 4px;
     padding: 15px;
-    background-color: #000;
+    background-color: #246eb9ff;
 
 }
