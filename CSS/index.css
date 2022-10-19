@@ -14,6 +14,10 @@
     background-image: linear-gradient(to left, rgba(184, 219, 217, 0.7), rgba(184,219,217, 0.4));
 }
 
+a{
+    cursor: pointer;
+}
+
 .menu{
     width: 20%;
     height: 120vh;
@@ -49,6 +53,7 @@
     font-size: 30px;
     letter-spacing: 4px;
     background-color: #246eb9ff;
+    cursor: pointer;
 
 }
 

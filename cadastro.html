@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/cadastro.css">
     <link rel="icon" type="image/x-icon" href="Imagens/hugALL-removebg-preview.png">
-    <title>Side Nav Bar</title>
+    <title>Cadastra-se no HugAll</title>
 </head>
 <body>
     <div id="main">
@@ -15,7 +15,7 @@
             <a href="cadastro.html">Cadastra-se</a>
             <a href="Index.html">Sobre Nós</a>
             <a href="Equipe.html">A Equipe</a>
-            <a href="#"></a>
+            <a href="Carrosel.html">ONGs em Destaque</a>
             <a href="#"></a>
             <a href="#"></a>
             <a href="#"></a>
@@ -34,10 +34,21 @@
                     <label for="">Data de Nascimento</label>
                     <input type="date" class="box-input" name="DataNascimento" id="DataNascimento" placeholder="dd/MM/AAAA"> 
                 </div>
-                <div>
+                <div class="input">
+                    <label for="">Senha</label>
+                    <input type="text" class="box-input" name="senha" id="senha" placeholder="Digite uma senha">     
+                </div>
+                <label for="" style="color:#231f20; font-weight: bold;">Quero Ser</label>
+                <div class="inputradio">
+                    <input type="radio" name="usertype" value="1"> Voluntário
+                    <input type="radio" name="usertype" value="2"> Doador
+                    <input type="radio" name="usertyper" value="3"> Observador 
+                </div>
+                <div class="input">
                     <button type="submit" class="button" id="button-send">Enviar</button>
                 </div>
             </form>
+            <a href="login.html"><label style="cursor: pointer;">já tem um cadastro ? Faça login</label></a>
         </div>
     </div>
     <script lang="javascript">
@@ -49,6 +60,8 @@
             let re = "([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})";
             let cpf = document.getElementById('cpf').value;
             let nome = document.getElementById('name').value;
+            let senha = document.getElementById('senha').value;
+            let usertype = form.usertype;
 
             var hoje = new Date();
             var dd = String(hoje.getDate()).padStart(2, '0');
@@ -66,7 +79,16 @@
                 alert('Digite seu nome!');
                 return false;
             }
+
+            if (senha.length == 0) {
+                alert('Digite uma senha!');
+                return false;
+            }
             
+            if (usertype.value == '') {
+                    alert('Por favor, escolha uma dos tipos de usuários!');
+                    return false;
+                }
             if (aniversario.length != 0) {
                 const ano = aniversario.split("-");
                 if (ano[0] >= 2005){
